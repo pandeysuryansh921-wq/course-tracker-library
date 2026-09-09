@@ -1,9 +1,9 @@
 {
-  "version": "4",
+  "version": "latest",
   "course": {
-    "id": "example-v4-course-123",
-    "title": "Introduction to Computer Science (V4 Example)",
-    "description": "An example course demonstrating the V4 schema with Gemini Gems and nested assignments.",
+    "id": "example-course-123",
+    "title": "Introduction to Computer Science (Example)",
+    "description": "An example course demonstrating the latest schema with Gemini Gems and nested assignments.",
     "geminiGems": [
       {
         "id": "gem-1",
@@ -16,7 +16,7 @@
   "modules": [
     {
       "id": "module-1",
-      "courseId": "example-v4-course-123",
+      "courseId": "example-course-123",
       "title": "Module 1: Basics",
       "description": "Introduction to programming concepts",
       "order": 1
@@ -25,7 +25,7 @@
   "topics": [
     {
       "id": "topic-1",
-      "courseId": "example-v4-course-123",
+      "courseId": "example-course-123",
       "moduleId": "module-1",
       "title": "1.1 Data Types",
       "description": "Learn about integers, strings, and booleans.",

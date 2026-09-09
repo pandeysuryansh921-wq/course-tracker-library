@@ -1,9 +1,9 @@
 [
   {
-    "id": "example-v4-course-123",
-    "title": "Introduction to Computer Science (V4 Example)",
+    "id": "example-course-123",
+    "title": "Introduction to Computer Science (Example)",
     "author": "DegreeTrack Team",
-    "description": "An example course demonstrating the new V4 schema with Gemini Gems and nested assignments.",
-    "filename": "v4-example-course.json"
+    "description": "An example course demonstrating the latest schema with Gemini Gems and nested assignments.",
+    "filename": "example-course.json"
   }
 ]
