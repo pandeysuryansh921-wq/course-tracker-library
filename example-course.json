@@ -2,7 +2,7 @@
   "version": "latest",
   "course": {
     "id": "example-course-123",
-    "title": "Introduction to Computer Science (Example)",
+    "name": "Introduction to Computer Science (Example)",
     "description": "An example course demonstrating the latest schema with Gemini Gems and nested assignments.",
     "geminiGems": [
       {
@@ -17,7 +17,7 @@
     {
       "id": "module-1",
       "courseId": "example-course-123",
-      "title": "Module 1: Basics",
+      "name": "Module 1: Basics",
       "description": "Introduction to programming concepts",
       "order": 1
     }
@@ -27,7 +27,7 @@
       "id": "topic-1",
       "courseId": "example-course-123",
       "moduleId": "module-1",
-      "title": "1.1 Data Types",
+      "name": "1.1 Data Types",
       "description": "Learn about integers, strings, and booleans.",
       "status": "Not Started",
       "order": 1
