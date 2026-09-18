@@ -1,0 +1,47 @@
+[
+  {
+    "id": "comm_3b1b_linear_algebra",
+    "title": "Essence of Linear Algebra — 3Blue1Brown",
+    "url": "https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab",
+    "type": "video",
+    "role": "VISUAL",
+    "category": "Mathematics & AI",
+    "description": "A geometric, intuitive foundation for vectors, matrices, determinants, and eigenvectors."
+  },
+  {
+    "id": "comm_mit_algorithms",
+    "title": "Introduction to Algorithms (SMA 5503) — MIT OCW",
+    "url": "https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-spring-2020/",
+    "type": "video",
+    "role": "PRIMARY",
+    "category": "Computer Science",
+    "description": "Complete rigorous course on sorting, trees, hashing, dynamic programming, and graphs."
+  },
+  {
+    "id": "comm_karpathy_nn",
+    "title": "Neural Networks: Zero to Hero — Andrej Karpathy",
+    "url": "https://www.youtube.com/playlist?list=PLAqhIrjkxbuWI23v9cThsA9GvCAUhRvKZ",
+    "type": "video",
+    "role": "PRIMARY",
+    "category": "Machine Learning",
+    "description": "Building micrograd, makemore, and GPT from scratch with deep backpropagation derivations."
+  },
+  {
+    "id": "comm_crafting_interpreters",
+    "title": "Crafting Interpreters — Robert Nystrom",
+    "url": "https://craftinginterpreters.com/",
+    "type": "textbook",
+    "role": "PRACTICE",
+    "category": "Software Engineering",
+    "description": "Handbook on compiler design, scanning, parsing, ASTs, bytecode, and virtual machines."
+  },
+  {
+    "id": "comm_stanford_cs229",
+    "title": "Machine Learning Course Notes — Stanford CS229",
+    "url": "https://cs229.stanford.edu/main_notes.pdf",
+    "type": "pdf",
+    "role": "REFERENCE",
+    "category": "Machine Learning",
+    "description": "Concise mathematical derivations of supervised and unsupervised learning algorithms."
+  }
+]
