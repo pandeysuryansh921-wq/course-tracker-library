@@ -40,7 +40,7 @@ jobs:
           ISSUE_TITLE: ${{ github.event.issue.title }}
           ISSUE_AUTHOR: ${{ github.event.issue.user.login }}
           ISSUE_NUMBER: ${{ github.event.issue.number }}
-          TRIGGER_TYPE: ${{ (github.event.label.name == 'approved' || startsWith(github.event.comment.body, '/approve')) && 'manual_approve' || 'auto' }}
+          TRIGGER_TYPE: ${{ (github.event.label.name == 'approved' || (github.event.comment && startsWith(github.event.comment.body, '/approve'))) && 'manual_approve' || 'auto' }}
         run: node .github/scripts/moderate-submission.js
 
       - name: Process Result & Publish if Auto-Approved

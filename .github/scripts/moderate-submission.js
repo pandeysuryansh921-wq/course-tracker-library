@@ -347,14 +347,80 @@ async function evaluateSubmission() {
     };
 
   } else if (submissionType === 'batch') {
-    const items = payload.resources || [];
-    if (!Array.isArray(items) || items.length === 0) {
+    const rawItems = payload.resources || [];
+    if (!Array.isArray(rawItems) || rawItems.length === 0) {
       return { decision: 'rejected', reason: 'Resource batch contains no items.' };
+    }
+
+    const resourcesIndex = loadJson(resourcesIndexPath, []);
+    const existingUrls = new Set(resourcesIndex.map(r => normalizeUrl(r.url)));
+
+    const validItems = [];
+    const skippedDuplicates = [];
+    const invalidItems = [];
+
+    for (let i = 0; i < rawItems.length; i++) {
+      const item = rawItems[i];
+      const res = item.resource || item;
+      const rawUrl = res.canonicalUrl || res.url;
+      const title = res.title?.trim();
+
+      if (!title || !rawUrl) {
+        invalidItems.push(`Item #${i + 1} missing title or URL`);
+        continue;
+      }
+
+      const cleanUrl = normalizeUrl(rawUrl);
+      if (!cleanUrl) {
+        invalidItems.push(`Item #${i + 1} (${title}) has invalid or prohibited protocol/address`);
+        continue;
+      }
+
+      if (existingUrls.has(cleanUrl)) {
+        skippedDuplicates.push(cleanUrl);
+        continue;
+      }
+
+      existingUrls.add(cleanUrl);
+      validItems.push({
+        title,
+        url: cleanUrl,
+        type: (res.type?.toLowerCase() || 'article'),
+        role: res.role || res.scopeInstructions || 'PRIMARY',
+        category: res.category || item.context?.topics?.[0] || 'Community',
+        description: res.description || `Community resource with confidence ${item.metrics?.confidenceScore || 0}`
+      });
+    }
+
+    if (validItems.length === 0) {
+      if (skippedDuplicates.length > 0) {
+        return {
+          decision: 'rejected',
+          reason: `All ${rawItems.length} resources in this batch are duplicates of items already in the library.`
+        };
+      }
+      return {
+        decision: 'rejected',
+        reason: `No valid resources found in batch (${invalidItems.join(', ')}).`
+      };
+    }
+
+    // Auto-approve if triggered by maintainer (/approve or label) OR if clean batch
+    if (triggerType === 'manual_approve' || invalidItems.length === 0) {
+      return {
+        decision: 'auto-approved',
+        type: 'batch',
+        data: {
+          validItems,
+          totalSubmitted: rawItems.length,
+          duplicateCount: skippedDuplicates.length
+        }
+      };
     }
 
     return {
       decision: 'needs-review',
-      reason: `Resource batch containing ${items.length} items queued for maintainer review.`,
+      reason: `Resource batch contains ${validItems.length} valid items and ${invalidItems.length} invalid items queued for maintainer review.`,
       type: 'batch'
     };
   }
@@ -477,6 +543,66 @@ async function run() {
 
       outputInfo.publishedId = id;
       outputInfo.publishedTitle = item.title;
+
+    } else if (result.type === 'batch') {
+      const { validItems, totalSubmitted, duplicateCount } = result.data;
+      const resourcesIndex = loadJson(resourcesIndexPath, []);
+      const legacyResources = loadJson(legacyResourcesPath, []);
+
+      validItems.forEach((item, idx) => {
+        const slug = item.title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '').substring(0, 35) || 'res';
+        const id = `res_${slug}_${(Date.now() + idx).toString(36)}`;
+        const fileName = `${id}.json`;
+
+        // 1. Create individual resource file
+        const fullItem = {
+          schemaVersion: 1,
+          id,
+          title: item.title,
+          url: item.url,
+          type: item.type,
+          role: item.role,
+          category: item.category,
+          description: item.description,
+          submittedAt: new Date().toISOString(),
+          verifiedAt: new Date().toISOString()
+        };
+        fs.writeFileSync(path.join(resourcesDir, fileName), JSON.stringify(fullItem, null, 2), 'utf8');
+
+        // 2. Add to community index
+        resourcesIndex.unshift({
+          id,
+          title: item.title,
+          url: item.url,
+          type: item.type,
+          role: item.role,
+          category: item.category,
+          file: `resources/${fileName}`
+        });
+
+        // 3. Add to legacy root resources.json
+        legacyResources.unshift({
+          id,
+          title: item.title,
+          url: item.url,
+          type: item.type,
+          role: item.role,
+          category: item.category,
+          description: item.description
+        });
+      });
+
+      fs.writeFileSync(resourcesIndexPath, JSON.stringify(resourcesIndex, null, 2), 'utf8');
+      fs.writeFileSync(legacyResourcesPath, JSON.stringify(legacyResources, null, 2), 'utf8');
+
+      // 4. Update manifest
+      manifest.libraryVersion = (manifest.libraryVersion || 1) + 1;
+      manifest.updatedAt = new Date().toISOString();
+      manifest.resourceCount = resourcesIndex.length;
+      fs.writeFileSync(manifestPath, JSON.stringify(manifest, null, 2), 'utf8');
+
+      outputInfo.publishedId = `batch_${validItems.length}_resources`;
+      outputInfo.publishedTitle = `Batch of ${validItems.length} resources (${duplicateCount} duplicate(s) skipped)`;
     }
   }
 
