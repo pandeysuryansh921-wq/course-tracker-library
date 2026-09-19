@@ -1,5 +1,13 @@
 [
   {
+    "id": "course_test-course-curriculum_mu80d7ir",
+    "title": "Test Course Curriculum",
+    "description": "A test course description for verifying submission.",
+    "author": "pandeysuryansh921-wq",
+    "moduleCount": 1,
+    "file": "courses/course_test-course-curriculum_mu80d7ir.json"
+  },
+  {
     "id": "example-course-123",
     "title": "Introduction to Computer Science (Example)",
     "description": "An example course demonstrating the latest schema with Gemini Gems and nested assignments.",

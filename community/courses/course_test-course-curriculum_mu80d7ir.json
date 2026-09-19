@@ -1,0 +1,34 @@
+{
+  "version": "degreetrack.curriculum.v1",
+  "exportedAt": "2026-09-19T06:30:09.576Z",
+  "course": {
+    "title": "Test Course Curriculum",
+    "description": "A test course description for verifying submission.",
+    "color": "#3B82F6",
+    "icon": "Book"
+  },
+  "modules": [
+    {
+      "id": "mod_1",
+      "title": "Module 1: Foundations",
+      "description": "Basic concepts",
+      "order": 0
+    }
+  ],
+  "topics": [
+    {
+      "id": "top_1",
+      "moduleId": "mod_1",
+      "title": "Topic 1.1: Getting Started",
+      "description": "Introduction to fundamentals",
+      "order": 0,
+      "resources": [
+        {
+          "title": "Official Docs",
+          "url": "https://developer.mozilla.org",
+          "type": "DOCUMENTATION"
+        }
+      ]
+    }
+  ]
+}
