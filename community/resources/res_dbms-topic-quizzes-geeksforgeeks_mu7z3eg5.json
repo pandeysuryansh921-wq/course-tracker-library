@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "id": "res_dbms-topic-quizzes-geeksforgeeks_mu7z3eg5",
+  "title": "DBMS Topic Quizzes — GeeksforGeeks",
+  "url": "https://www.geeksforgeeks.org/quizzes/?category=dbms-gq&page=1",
+  "type": "quiz",
+  "role": "PRIMARY",
+  "category": "SQL and relational databases",
+  "description": "Community resource with confidence 0",
+  "submittedAt": "2026-09-19T05:54:48.620Z",
+  "verifiedAt": "2026-09-19T05:54:48.620Z"
+}

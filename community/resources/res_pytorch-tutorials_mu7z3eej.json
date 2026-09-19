@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "id": "res_pytorch-tutorials_mu7z3eej",
+  "title": "PyTorch Tutorials",
+  "url": "https://docs.pytorch.org/tutorials",
+  "type": "documentation",
+  "role": "PRIMARY",
+  "category": "Backpropagation and optimization",
+  "description": "Community resource with confidence 0",
+  "submittedAt": "2026-09-19T05:54:48.617Z",
+  "verifiedAt": "2026-09-19T05:54:48.617Z"
+}

@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "id": "res_the-cancer-imaging-archive_mu7z3efk",
+  "title": "The Cancer Imaging Archive",
+  "url": "https://www.cancerimagingarchive.net/",
+  "type": "dataset",
+  "role": "PRIMARY",
+  "category": "Medical imaging AI",
+  "description": "Community resource with confidence 0",
+  "submittedAt": "2026-09-19T05:54:48.619Z",
+  "verifiedAt": "2026-09-19T05:54:48.619Z"
+}

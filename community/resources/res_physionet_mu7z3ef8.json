@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "id": "res_physionet_mu7z3ef8",
+  "title": "PhysioNet",
+  "url": "https://physionet.org/",
+  "type": "dataset",
+  "role": "PRIMARY",
+  "category": "Biomedical signal processing",
+  "description": "Community resource with confidence 0",
+  "submittedAt": "2026-09-19T05:54:48.619Z",
+  "verifiedAt": "2026-09-19T05:54:48.619Z"
+}

@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "id": "res_sql-quiz-w3schools_mu7z3ef7",
+  "title": "SQL Quiz — W3Schools",
+  "url": "https://www.w3schools.com/quiztest/quiztest.asp?qtest=sql",
+  "type": "quiz",
+  "role": "PRIMARY",
+  "category": "SQL and relational databases",
+  "description": "Community resource with confidence 0",
+  "submittedAt": "2026-09-19T05:54:48.619Z",
+  "verifiedAt": "2026-09-19T05:54:48.619Z"
+}

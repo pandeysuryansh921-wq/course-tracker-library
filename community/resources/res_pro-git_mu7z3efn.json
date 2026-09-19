@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "id": "res_pro-git_mu7z3efn",
+  "title": "Pro Git",
+  "url": "https://git-scm.com/book/en/v2",
+  "type": "textbook",
+  "role": "PRIMARY",
+  "category": "Git/GitHub and reproducibility",
+  "description": "Community resource with confidence 0",
+  "submittedAt": "2026-09-19T05:54:48.619Z",
+  "verifiedAt": "2026-09-19T05:54:48.619Z"
+}

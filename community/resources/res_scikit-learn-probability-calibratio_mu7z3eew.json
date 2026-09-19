@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "id": "res_scikit-learn-probability-calibratio_mu7z3eew",
+  "title": "scikit-learn Probability Calibration",
+  "url": "https://scikit-learn.org/stable/modules/calibration.html",
+  "type": "documentation",
+  "role": "PRIMARY",
+  "category": "Evaluation, calibration and uncertainty",
+  "description": "Community resource with confidence 0",
+  "submittedAt": "2026-09-19T05:54:48.618Z",
+  "verifiedAt": "2026-09-19T05:54:48.618Z"
+}

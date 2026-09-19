@@ -1,5 +1,554 @@
 [
   {
+    "id": "res_mit-18-06sc-linear-algebra_mu7z3eg8",
+    "title": "MIT 18.06SC Linear Algebra",
+    "url": "https://ocw.mit.edu/courses/18-06sc-linear-algebra-fall-2011/pages",
+    "type": "course",
+    "role": "PRIMARY",
+    "category": "Linear algebra for AI",
+    "file": "resources/res_mit-18-06sc-linear-algebra_mu7z3eg8.json"
+  },
+  {
+    "id": "res_cs224n-project-resources_mu7z3eg7",
+    "title": "CS224N Project Resources",
+    "url": "https://web.stanford.edu/class/cs224n/project.html",
+    "type": "project",
+    "role": "PRIMARY",
+    "category": "Capstone thesis and open research",
+    "file": "resources/res_cs224n-project-resources_mu7z3eg7.json"
+  },
+  {
+    "id": "res_hugging-face-peft-documentation_mu7z3eg6",
+    "title": "Hugging Face PEFT documentation",
+    "url": "https://huggingface.co/docs/peft/index",
+    "type": "documentation",
+    "role": "PRIMARY",
+    "category": "Fine-tuning, LoRA, quantization and deployment",
+    "file": "resources/res_hugging-face-peft-documentation_mu7z3eg6.json"
+  },
+  {
+    "id": "res_dbms-topic-quizzes-geeksforgeeks_mu7z3eg5",
+    "title": "DBMS Topic Quizzes — GeeksforGeeks",
+    "url": "https://www.geeksforgeeks.org/quizzes/?category=dbms-gq&page=1",
+    "type": "quiz",
+    "role": "PRIMARY",
+    "category": "SQL and relational databases",
+    "file": "resources/res_dbms-topic-quizzes-geeksforgeeks_mu7z3eg5.json"
+  },
+  {
+    "id": "res_cs50x-free-cs50-certificate_mu7z3eg4",
+    "title": "CS50x — Free CS50 Certificate",
+    "url": "https://cs50.harvard.edu/x/certificate",
+    "type": "certificate",
+    "role": "PRIMARY",
+    "category": "Computational thinking, testing and debugging",
+    "file": "resources/res_cs50x-free-cs50-certificate_mu7z3eg4.json"
+  },
+  {
+    "id": "res_pytorch-learn-the-basics_mu7z3eg3",
+    "title": "PyTorch Learn the Basics",
+    "url": "https://docs.pytorch.org/tutorials/beginner/basics/intro.html",
+    "type": "documentation",
+    "role": "PRIMARY",
+    "category": "PyTorch training systems",
+    "file": "resources/res_pytorch-learn-the-basics_mu7z3eg3.json"
+  },
+  {
+    "id": "res_stanford-cs231n_mu7z3eg2",
+    "title": "Stanford CS231n",
+    "url": "https://web.stanford.edu/class/cs231n",
+    "type": "course",
+    "role": "PRIMARY",
+    "category": "Computer vision foundations",
+    "file": "resources/res_stanford-cs231n_mu7z3eg2.json"
+  },
+  {
+    "id": "res_fda-artificial-intelligence-and-mac_mu7z3eg1",
+    "title": "FDA Artificial Intelligence and Machine Learning",
+    "url": "https://www.fda.gov/medical-devices/software-medical-device-samd/artificial-intelligence-and-machine-learning-aiml-enabled-medical-devices",
+    "type": "article",
+    "role": "PRIMARY",
+    "category": "Clinical prediction and decision support",
+    "file": "resources/res_fda-artificial-intelligence-and-mac_mu7z3eg1.json"
+  },
+  {
+    "id": "res_reinforcement-learning-and-game-ai-_mu7z3eg0",
+    "title": "Reinforcement Learning and Game AI Practice — Kaggle Learn",
+    "url": "https://www.kaggle.com/learn",
+    "type": "quiz",
+    "role": "PRIMARY",
+    "category": "Reinforcement-learning foundations",
+    "file": "resources/res_reinforcement-learning-and-game-ai-_mu7z3eg0.json"
+  },
+  {
+    "id": "res_mit-18-02sc-multivariable-calculus_mu7z3efz",
+    "title": "MIT 18.02SC Multivariable Calculus",
+    "url": "https://ocw.mit.edu/courses/18-02sc-multivariable-calculus-fall-2010",
+    "type": "course",
+    "role": "PRIMARY",
+    "category": "Calculus, gradients and Jacobians",
+    "file": "resources/res_mit-18-02sc-multivariable-calculus_mu7z3efz.json"
+  },
+  {
+    "id": "res_fastapi-documentation_mu7z3efy",
+    "title": "FastAPI documentation",
+    "url": "https://fastapi.tiangolo.com/",
+    "type": "documentation",
+    "role": "PRIMARY",
+    "category": "APIs and lightweight backend",
+    "file": "resources/res_fastapi-documentation_mu7z3efy.json"
+  },
+  {
+    "id": "res_hugging-face-transformers_mu7z3efx",
+    "title": "Hugging Face Transformers",
+    "url": "https://huggingface.co/docs/transformers/index",
+    "type": "documentation",
+    "role": "PRIMARY",
+    "category": "Multimodal and foundation models for medicine",
+    "file": "resources/res_hugging-face-transformers_mu7z3efx.json"
+  },
+  {
+    "id": "res_kaggle-deep-learning-completion-cer_mu7z3efw",
+    "title": "Kaggle Deep Learning — Completion Certificate",
+    "url": "https://www.kaggle.com/learn/deep-learning",
+    "type": "certificate",
+    "role": "PRIMARY",
+    "category": "Neural-network foundations",
+    "file": "resources/res_kaggle-deep-learning-completion-cer_mu7z3efw.json"
+  },
+  {
+    "id": "res_linear-algebra-pyq-quiz-geeksforgee_mu7z3efv",
+    "title": "Linear Algebra PYQ Quiz — GeeksforGeeks",
+    "url": "https://www.geeksforgeeks.org/quizzes",
+    "type": "quiz",
+    "role": "PRIMARY",
+    "category": "Linear algebra for AI",
+    "file": "resources/res_linear-algebra-pyq-quiz-geeksforgee_mu7z3efv.json"
+  },
+  {
+    "id": "res_operating-systems-topic-quizzes-gee_mu7z3efu",
+    "title": "Operating Systems Topic Quizzes — GeeksforGeeks",
+    "url": "https://www.geeksforgeeks.org/quizzes/?category=operating-systems&page=1",
+    "type": "quiz",
+    "role": "PRIMARY",
+    "category": "Operating systems and processes",
+    "file": "resources/res_operating-systems-topic-quizzes-gee_mu7z3efu.json"
+  },
+  {
+    "id": "res_mit-18-065-matrix-methods-in-data-a_mu7z3eft",
+    "title": "MIT 18.065 Matrix Methods in Data Analysis, Signal Processing, and Machine Learning",
+    "url": "https://ocw.mit.edu/courses/18-065-matrix-methods-in-data-analysis-signal-processing-and-machine-learning-spring-2018",
+    "type": "course",
+    "role": "PRIMARY",
+    "category": "Optimization and numerical computing",
+    "file": "resources/res_mit-18-065-matrix-methods-in-data-a_mu7z3eft.json"
+  },
+  {
+    "id": "res_cs50-ai-free-cs50-certificate_mu7z3efs",
+    "title": "CS50 AI — Free CS50 Certificate",
+    "url": "https://cs50.harvard.edu/ai/certificate",
+    "type": "certificate",
+    "role": "PRIMARY",
+    "category": "LLMs and generative AI",
+    "file": "resources/res_cs50-ai-free-cs50-certificate_mu7z3efs.json"
+  },
+  {
+    "id": "res_pandas-user-guide_mu7z3efq",
+    "title": "pandas User Guide",
+    "url": "https://pandas.pydata.org/docs/user_guide",
+    "type": "documentation",
+    "role": "PRIMARY",
+    "category": "NumPy and pandas",
+    "file": "resources/res_pandas-user-guide_mu7z3efq.json"
+  },
+  {
+    "id": "res_nav2-documentation_mu7z3efp",
+    "title": "Nav2 Documentation",
+    "url": "https://docs.nav2.org/",
+    "type": "documentation",
+    "role": "PRIMARY",
+    "category": "Localization, mapping, SLAM and navigation",
+    "file": "resources/res_nav2-documentation_mu7z3efp.json"
+  },
+  {
+    "id": "res_cs50x-practice-problems-harvard_mu7z3efo",
+    "title": "CS50x Practice Problems — Harvard",
+    "url": "https://cs50.harvard.edu/x/2026/practice",
+    "type": "quiz",
+    "role": "PRIMARY",
+    "category": "Computational thinking, testing and debugging",
+    "file": "resources/res_cs50x-practice-problems-harvard_mu7z3efo.json"
+  },
+  {
+    "id": "res_pro-git_mu7z3efn",
+    "title": "Pro Git",
+    "url": "https://git-scm.com/book/en/v2",
+    "type": "textbook",
+    "role": "PRIMARY",
+    "category": "Git/GitHub and reproducibility",
+    "file": "resources/res_pro-git_mu7z3efn.json"
+  },
+  {
+    "id": "res_cs50x-problem-sets-harvard_mu7z3efm",
+    "title": "CS50x Problem Sets — Harvard",
+    "url": "https://cs50.harvard.edu/x/2026/psets",
+    "type": "quiz",
+    "role": "PRIMARY",
+    "category": "Algorithms and complexity",
+    "file": "resources/res_cs50x-problem-sets-harvard_mu7z3efm.json"
+  },
+  {
+    "id": "res_python-tutorial_mu7z3efl",
+    "title": "Python Tutorial",
+    "url": "https://docs.python.org/3/tutorial",
+    "type": "documentation",
+    "role": "PRIMARY",
+    "category": "Python programming",
+    "file": "resources/res_python-tutorial_mu7z3efl.json"
+  },
+  {
+    "id": "res_the-cancer-imaging-archive_mu7z3efk",
+    "title": "The Cancer Imaging Archive",
+    "url": "https://www.cancerimagingarchive.net/",
+    "type": "dataset",
+    "role": "PRIMARY",
+    "category": "Medical imaging AI",
+    "file": "resources/res_the-cancer-imaging-archive_mu7z3efk.json"
+  },
+  {
+    "id": "res_the-missing-semester-of-your-cs-edu_mu7z3efj",
+    "title": "The Missing Semester of Your CS Education",
+    "url": "https://missing.csail.mit.edu/",
+    "type": "course",
+    "role": "PRIMARY",
+    "category": "Linux and shell",
+    "file": "resources/res_the-missing-semester-of-your-cs-edu_mu7z3efj.json"
+  },
+  {
+    "id": "res_google-machine-learning-crash-cours_mu7z3efi",
+    "title": "Google Machine Learning Crash Course — Google Developer Badges",
+    "url": "https://developers.google.com/machine-learning/crash-course",
+    "type": "badge",
+    "role": "PRIMARY",
+    "category": "Attention and transformers",
+    "file": "resources/res_google-machine-learning-crash-cours_mu7z3efi.json"
+  },
+  {
+    "id": "res_cs50x-2026_mu7z3efh",
+    "title": "CS50x 2026",
+    "url": "https://cs50.harvard.edu/x",
+    "type": "course",
+    "role": "PRIMARY",
+    "category": "Data structures",
+    "file": "resources/res_cs50x-2026_mu7z3efh.json"
+  },
+  {
+    "id": "res_stanford-cs224n_mu7z3efg",
+    "title": "Stanford CS224N",
+    "url": "https://web.stanford.edu/class/cs224n",
+    "type": "course",
+    "role": "PRIMARY",
+    "category": "Attention and transformers",
+    "file": "resources/res_stanford-cs224n_mu7z3efg.json"
+  },
+  {
+    "id": "res_cs50p-free-cs50-certificate_mu7z3eff",
+    "title": "CS50P — Free CS50 Certificate",
+    "url": "https://cs50.harvard.edu/python/certificate",
+    "type": "certificate",
+    "role": "PRIMARY",
+    "category": "Python programming",
+    "file": "resources/res_cs50p-free-cs50-certificate_mu7z3eff.json"
+  },
+  {
+    "id": "res_kaggle-intro-to-sql-completion-cert_mu7z3efe",
+    "title": "Kaggle Intro to SQL — Completion Certificate",
+    "url": "https://www.kaggle.com/learn/intro-to-sql",
+    "type": "certificate",
+    "role": "PRIMARY",
+    "category": "SQL and relational databases",
+    "file": "resources/res_kaggle-intro-to-sql-completion-cert_mu7z3efe.json"
+  },
+  {
+    "id": "res_cs50-ai_mu7z3efd",
+    "title": "CS50 AI",
+    "url": "https://cs50.harvard.edu/ai",
+    "type": "course",
+    "role": "PRIMARY",
+    "category": "Reinforcement-learning foundations",
+    "file": "resources/res_cs50-ai_mu7z3efd.json"
+  },
+  {
+    "id": "res_hugging-face-llm-course_mu7z3efc",
+    "title": "Hugging Face LLM Course",
+    "url": "https://huggingface.co/learn/llm-course/chapter1/1",
+    "type": "course",
+    "role": "PRIMARY",
+    "category": "LLMs and generative AI",
+    "file": "resources/res_hugging-face-llm-course_mu7z3efc.json"
+  },
+  {
+    "id": "res_data-types-video_mu7z3efb",
+    "title": "Data Types Video",
+    "url": "https://youtube.com/...",
+    "type": "video",
+    "role": "PRIMARY",
+    "category": "1.1 Data Types",
+    "file": "resources/res_data-types-video_mu7z3efb.json"
+  },
+  {
+    "id": "res_ros-2-documentation_mu7z3efa",
+    "title": "ROS 2 Documentation",
+    "url": "https://docs.ros.org/",
+    "type": "documentation",
+    "role": "PRIMARY",
+    "category": "ROS 2, kinematics and PID control",
+    "file": "resources/res_ros-2-documentation_mu7z3efa.json"
+  },
+  {
+    "id": "res_fast-ai-practical-deep-learning_mu7z3ef9",
+    "title": "fast.ai Practical Deep Learning",
+    "url": "https://course.fast.ai/",
+    "type": "course",
+    "role": "PRIMARY",
+    "category": "Neural-network foundations",
+    "file": "resources/res_fast-ai-practical-deep-learning_mu7z3ef9.json"
+  },
+  {
+    "id": "res_physionet_mu7z3ef8",
+    "title": "PhysioNet",
+    "url": "https://physionet.org/",
+    "type": "dataset",
+    "role": "PRIMARY",
+    "category": "Biomedical signal processing",
+    "file": "resources/res_physionet_mu7z3ef8.json"
+  },
+  {
+    "id": "res_sql-quiz-w3schools_mu7z3ef7",
+    "title": "SQL Quiz — W3Schools",
+    "url": "https://www.w3schools.com/quiztest/quiztest.asp?qtest=sql",
+    "type": "quiz",
+    "role": "PRIMARY",
+    "category": "SQL and relational databases",
+    "file": "resources/res_sql-quiz-w3schools_mu7z3ef7.json"
+  },
+  {
+    "id": "res_computer-organization-and-architect_mu7z3ef6",
+    "title": "Computer Organization and Architecture Mock Quizzes — GeeksforGeeks",
+    "url": "https://www.geeksforgeeks.org/gate/mock-quizzes-for-gate-cs-gq",
+    "type": "quiz",
+    "role": "PRIMARY",
+    "category": "Discrete mathematics and computational logic",
+    "file": "resources/res_computer-organization-and-architect_mu7z3ef6.json"
+  },
+  {
+    "id": "res_transformer-attention-quiz-geeksfor_mu7z3ef5",
+    "title": "Transformer Attention Quiz — GeeksforGeeks",
+    "url": "https://www.geeksforgeeks.org/quizzes/?category=machine-learning",
+    "type": "quiz",
+    "role": "PRIMARY",
+    "category": "Neural-network foundations",
+    "file": "resources/res_transformer-attention-quiz-geeksfor_mu7z3ef5.json"
+  },
+  {
+    "id": "res_numpy-learn_mu7z3ef4",
+    "title": "NumPy Learn",
+    "url": "https://numpy.org/learn",
+    "type": "documentation",
+    "role": "PRIMARY",
+    "category": "NumPy and pandas",
+    "file": "resources/res_numpy-learn_mu7z3ef4.json"
+  },
+  {
+    "id": "res_robotics-toolbox-for-python_mu7z3ef3",
+    "title": "Robotics Toolbox for Python",
+    "url": "https://github.com/petercorke/robotics-toolbox-python",
+    "type": "github",
+    "role": "PRIMARY",
+    "category": "Robotics mathematics and perception",
+    "file": "resources/res_robotics-toolbox-for-python_mu7z3ef3.json"
+  },
+  {
+    "id": "res_python-quizzes-geeksforgeeks_mu7z3ef1",
+    "title": "Python Quizzes — GeeksforGeeks",
+    "url": "https://www.geeksforgeeks.org/quizzes/?category=python-quizzes-gq&page=1",
+    "type": "quiz",
+    "role": "PRIMARY",
+    "category": "Python programming",
+    "file": "resources/res_python-quizzes-geeksforgeeks_mu7z3ef1.json"
+  },
+  {
+    "id": "res_mit-18-05-probability-and-statistic_mu7z3ef0",
+    "title": "MIT 18.05 Probability and Statistics",
+    "url": "https://ocw.mit.edu/courses/18-05-introduction-to-probability-and-statistics-spring-2022",
+    "type": "course",
+    "role": "PRIMARY",
+    "category": "Statistics and regression",
+    "file": "resources/res_mit-18-05-probability-and-statistic_mu7z3ef0.json"
+  },
+  {
+    "id": "res_nist-medical-robots_mu7z3eez",
+    "title": "NIST Medical Robots",
+    "url": "https://www.nist.gov/topics/robotics",
+    "type": "article",
+    "role": "PRIMARY",
+    "category": "Medical robotics, rehabilitation and prosthetics",
+    "file": "resources/res_nist-medical-robots_mu7z3eez.json"
+  },
+  {
+    "id": "res_computer-networks-topic-quizzes-gee_mu7z3eey",
+    "title": "Computer Networks Topic Quizzes — GeeksforGeeks",
+    "url": "https://www.geeksforgeeks.org/quizzes/?category=computer-networks",
+    "type": "quiz",
+    "role": "PRIMARY",
+    "category": "Computer networking fundamentals",
+    "file": "resources/res_computer-networks-topic-quizzes-gee_mu7z3eey.json"
+  },
+  {
+    "id": "res_scikit-learn-user-guide_mu7z3eex",
+    "title": "scikit-learn User Guide",
+    "url": "https://scikit-learn.org/stable/user_guide.html",
+    "type": "documentation",
+    "role": "PRIMARY",
+    "category": "SVM, k-NN, clustering and dimensionality reduction",
+    "file": "resources/res_scikit-learn-user-guide_mu7z3eex.json"
+  },
+  {
+    "id": "res_scikit-learn-probability-calibratio_mu7z3eew",
+    "title": "scikit-learn Probability Calibration",
+    "url": "https://scikit-learn.org/stable/modules/calibration.html",
+    "type": "documentation",
+    "role": "PRIMARY",
+    "category": "Evaluation, calibration and uncertainty",
+    "file": "resources/res_scikit-learn-probability-calibratio_mu7z3eew.json"
+  },
+  {
+    "id": "res_mit-6-100l-introduction-to-cs-and-p_mu7z3eev",
+    "title": "MIT 6.100L Introduction to CS and Programming Using Python",
+    "url": "https://ocw.mit.edu/courses/6-100l-introduction-to-cs-and-programming-using-python-fall-2022",
+    "type": "course",
+    "role": "PRIMARY",
+    "category": "Python programming",
+    "file": "resources/res_mit-6-100l-introduction-to-cs-and-p_mu7z3eev.json"
+  },
+  {
+    "id": "res_numpy-and-pandas-quizzes-w3schools_mu7z3eeu",
+    "title": "NumPy and Pandas Quizzes — W3Schools",
+    "url": "https://www.w3schools.com/quiztest",
+    "type": "quiz",
+    "role": "PRIMARY",
+    "category": "NumPy and pandas",
+    "file": "resources/res_numpy-and-pandas-quizzes-w3schools_mu7z3eeu.json"
+  },
+  {
+    "id": "res_cs50-sql_mu7z3eet",
+    "title": "CS50 SQL",
+    "url": "https://cs50.harvard.edu/sql",
+    "type": "course",
+    "role": "PRIMARY",
+    "category": "SQL and relational databases",
+    "file": "resources/res_cs50-sql_mu7z3eet.json"
+  },
+  {
+    "id": "res_algorithms-topic-quizzes-geeksforge_mu7z3ees",
+    "title": "Algorithms Topic Quizzes — GeeksforGeeks",
+    "url": "https://www.geeksforgeeks.org/gate/gate-cs-subject-wise-and-topic-wise-pyq-quizzes",
+    "type": "quiz",
+    "role": "PRIMARY",
+    "category": "Algorithms and complexity",
+    "file": "resources/res_algorithms-topic-quizzes-geeksforge_mu7z3ees.json"
+  },
+  {
+    "id": "res_who-ethics-and-governance-of-ai-for_mu7z3eer",
+    "title": "WHO Ethics and Governance of AI for Health",
+    "url": "https://www.who.int/publications/i/item/9789240029200",
+    "type": "article",
+    "role": "PRIMARY",
+    "category": "Healthcare data, privacy and responsible AI",
+    "file": "resources/res_who-ethics-and-governance-of-ai-for_mu7z3eer.json"
+  },
+  {
+    "id": "res_kaggle-pandas-completion-certificat_mu7z3eeq",
+    "title": "Kaggle Pandas — Completion Certificate",
+    "url": "https://www.kaggle.com/learn/pandas",
+    "type": "certificate",
+    "role": "PRIMARY",
+    "category": "NumPy and pandas",
+    "file": "resources/res_kaggle-pandas-completion-certificat_mu7z3eeq.json"
+  },
+  {
+    "id": "res_pubmed_mu7z3eep",
+    "title": "PubMed",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/",
+    "type": "article",
+    "role": "PRIMARY",
+    "category": "Medical AI research reproduction",
+    "file": "resources/res_pubmed_mu7z3eep.json"
+  },
+  {
+    "id": "res_kaggle-natural-language-processing-_mu7z3eeo",
+    "title": "Kaggle Natural Language Processing — Completion Certificate",
+    "url": "https://www.kaggle.com/learn/natural-language-processing",
+    "type": "certificate",
+    "role": "PRIMARY",
+    "category": "NLP foundations",
+    "file": "resources/res_kaggle-natural-language-processing-_mu7z3eeo.json"
+  },
+  {
+    "id": "res_probability-and-statistics-quizzes-_mu7z3een",
+    "title": "Probability and Statistics Quizzes — GeeksforGeeks",
+    "url": "https://www.geeksforgeeks.org/quizzes/?page=8",
+    "type": "quiz",
+    "role": "PRIMARY",
+    "category": "Probability and Bayesian reasoning",
+    "file": "resources/res_probability-and-statistics-quizzes-_mu7z3een.json"
+  },
+  {
+    "id": "res_kaggle-intro-to-machine-learning-co_mu7z3eel",
+    "title": "Kaggle Intro to Machine Learning — Completion Certificate",
+    "url": "https://www.kaggle.com/learn/intro-to-machine-learning",
+    "type": "certificate",
+    "role": "PRIMARY",
+    "category": "ML workflow and data leakage",
+    "file": "resources/res_kaggle-intro-to-machine-learning-co_mu7z3eel.json"
+  },
+  {
+    "id": "res_kaggle-intermediate-machine-learnin_mu7z3eek",
+    "title": "Kaggle Intermediate Machine Learning — Completion Certificate",
+    "url": "https://www.kaggle.com/learn/intermediate-machine-learning",
+    "type": "certificate",
+    "role": "PRIMARY",
+    "category": "Evaluation, calibration and uncertainty",
+    "file": "resources/res_kaggle-intermediate-machine-learnin_mu7z3eek.json"
+  },
+  {
+    "id": "res_pytorch-tutorials_mu7z3eej",
+    "title": "PyTorch Tutorials",
+    "url": "https://docs.pytorch.org/tutorials",
+    "type": "documentation",
+    "role": "PRIMARY",
+    "category": "Backpropagation and optimization",
+    "file": "resources/res_pytorch-tutorials_mu7z3eej.json"
+  },
+  {
+    "id": "res_tripod-ai_mu7z3eei",
+    "title": "TRIPOD+AI",
+    "url": "https://www.tripod-statement.org/",
+    "type": "article",
+    "role": "PRIMARY",
+    "category": "Advanced medical-AI evaluation and safety",
+    "file": "resources/res_tripod-ai_mu7z3eei.json"
+  },
+  {
+    "id": "res_software-carpentry_mu7z3eeh",
+    "title": "Software Carpentry",
+    "url": "https://software-carpentry.org/lessons",
+    "type": "course",
+    "role": "PRIMARY",
+    "category": "Scientific software engineering",
+    "file": "resources/res_software-carpentry_mu7z3eeh.json"
+  },
+  {
     "id": "res_harvard-cs50-introduction-to-comput_mu7xyl9t",
     "title": "Harvard CS50: Introduction to Computer Science",
     "url": "https://www.youtube.com/watch?v=LfaMVlDaQ24",
