@@ -1,0 +1,11 @@
+{
+  "schemaVersion": 1,
+  "id": "comm_stanford_cs229",
+  "title": "Machine Learning Course Notes — Stanford CS229",
+  "url": "https://cs229.stanford.edu/main_notes.pdf",
+  "type": "pdf",
+  "role": "REFERENCE",
+  "category": "Machine Learning",
+  "submittedAt": "2026-09-18T00:00:00.000Z",
+  "verifiedAt": "2026-09-18T00:00:00.000Z"
+}

@@ -1,0 +1,10 @@
+[
+  {
+    "id": "example-course-123",
+    "title": "Introduction to Computer Science (Example)",
+    "description": "An example course demonstrating the latest schema with Gemini Gems and nested assignments.",
+    "author": "DegreeTrack Team",
+    "moduleCount": 1,
+    "file": "courses/example-course-123.json"
+  }
+]

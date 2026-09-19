@@ -1,0 +1,47 @@
+[
+  {
+    "id": "comm_3b1b_linear_algebra",
+    "title": "Essence of Linear Algebra — 3Blue1Brown",
+    "url": "https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab",
+    "type": "video",
+    "role": "VISUAL",
+    "category": "Mathematics & AI",
+    "file": "resources/comm_3b1b_linear_algebra.json"
+  },
+  {
+    "id": "comm_mit_algorithms",
+    "title": "Introduction to Algorithms (SMA 5503) — MIT OCW",
+    "url": "https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-spring-2020/",
+    "type": "video",
+    "role": "PRIMARY",
+    "category": "Computer Science",
+    "file": "resources/comm_mit_algorithms.json"
+  },
+  {
+    "id": "comm_karpathy_nn",
+    "title": "Neural Networks: Zero to Hero — Andrej Karpathy",
+    "url": "https://www.youtube.com/playlist?list=PLAqhIrjkxbuWI23v9cThsA9GvCAUhRvKZ",
+    "type": "video",
+    "role": "PRIMARY",
+    "category": "Machine Learning",
+    "file": "resources/comm_karpathy_nn.json"
+  },
+  {
+    "id": "comm_crafting_interpreters",
+    "title": "Crafting Interpreters — Robert Nystrom",
+    "url": "https://craftinginterpreters.com/",
+    "type": "textbook",
+    "role": "PRACTICE",
+    "category": "Software Engineering",
+    "file": "resources/comm_crafting_interpreters.json"
+  },
+  {
+    "id": "comm_stanford_cs229",
+    "title": "Machine Learning Course Notes — Stanford CS229",
+    "url": "https://cs229.stanford.edu/main_notes.pdf",
+    "type": "pdf",
+    "role": "REFERENCE",
+    "category": "Machine Learning",
+    "file": "resources/comm_stanford_cs229.json"
+  }
+]

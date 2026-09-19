@@ -1,0 +1,168 @@
+name: Automated Community Submission Moderator
+
+on:
+  issues:
+    types: [opened, labeled]
+  issue_comment:
+    types: [created]
+
+permissions:
+  contents: write
+  issues: write
+
+concurrency:
+  group: community-publishing
+  cancel-in-progress: false
+
+jobs:
+  moderate:
+    # Run for any new community-submission issue, or when a maintainer comments /approve or adds 'approved'
+    if: >-
+      (github.event_name == 'issues' && (contains(github.event.issue.labels.*.name, 'community-submission') || github.event.action == 'opened')) ||
+      (github.event_name == 'issues' && github.event.label.name == 'approved') ||
+      (github.event_name == 'issue_comment' && startsWith(github.event.comment.body, '/approve') && 
+       (github.event.comment.author_association == 'OWNER' || github.event.comment.author_association == 'COLLABORATOR' || github.event.comment.author_association == 'MEMBER'))
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Run Deterministic Security & Moderation Pipeline
+        env:
+          ISSUE_BODY: ${{ github.event.issue.body }}
+          ISSUE_TITLE: ${{ github.event.issue.title }}
+          ISSUE_AUTHOR: ${{ github.event.issue.user.login }}
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+          TRIGGER_TYPE: ${{ (github.event.label.name == 'approved' || startsWith(github.event.comment.body, '/approve')) && 'manual_approve' || 'auto' }}
+        run: node .github/scripts/moderate-submission.js
+
+      - name: Process Result & Publish if Auto-Approved
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const path = require('path');
+            const resultFile = path.join(process.cwd(), 'moderation-result.json');
+            if (!fs.existsSync(resultFile)) {
+              console.log('No moderation result generated, skipping.');
+              return;
+            }
+            const result = JSON.parse(fs.readFileSync(resultFile, 'utf8'));
+            const issueNum = context.issue.number;
+
+            if (result.decision === 'auto-approved') {
+              console.log('Publishing auto-approved submission:', result.publishedId);
+              
+              // 1. Commit and push changes safely with retry
+              const exec = require('child_process').execSync;
+              exec('git config --global user.name "github-actions[bot]"');
+              exec('git config --global user.email "github-actions[bot]@users.noreply.github.com"');
+              exec('git add community/ courses.json resources.json');
+              try {
+                exec('git commit -m "feat(community): auto-publish #' + issueNum + ' (' + (result.publishedId || 'item') + ') [skip ci]"');
+                for (let i = 0; i < 3; i++) {
+                  try {
+                    exec('git pull --rebase && git push');
+                    break;
+                  } catch (e) {
+                    if (i === 2) throw e;
+                    exec('sleep 2');
+                  }
+                }
+              } catch (e) {
+                console.log('No git changes or already pushed:', e.message);
+              }
+
+              // 2. Comment on issue
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: issueNum,
+                body: '🎉 **Auto-Approved and Published to Community Library!**\n\n' +
+                      'This submission has passed all automated schema, privacy, protocol, and security checks.\n\n' +
+                      '- **Assigned ID:** `' + (result.publishedId || 'published') + '`\n' +
+                      '- **Title:** ' + (result.publishedTitle || 'Community Item') + '\n\n' +
+                      '> *This item is now live and can be imported immediately in the DegreeTrack app.*'
+              });
+
+              // 3. Update labels and close
+              await github.rest.issues.addLabels({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: issueNum,
+                labels: ['auto-approved', 'published']
+              }).catch(() => {});
+
+              await github.rest.issues.removeLabel({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: issueNum,
+                name: 'community-submission'
+              }).catch(() => {});
+
+              await github.rest.issues.removeLabel({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: issueNum,
+                name: 'needs-review'
+              }).catch(() => {});
+
+              await github.rest.issues.update({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: issueNum,
+                state: 'closed'
+              });
+
+            } else if (result.decision === 'needs-review') {
+              console.log('Submission marked as needs-review:', result.reason);
+
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: issueNum,
+                body: '⚠️ **Submission Queued for Maintainer Review**\n\n' +
+                      result.reason + '\n\n' +
+                      '*A maintainer will review this item. Maintainers can approve by adding the `approved` label or commenting `/approve`.*'
+              });
+
+              await github.rest.issues.addLabels({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: issueNum,
+                labels: ['needs-review']
+              }).catch(() => {});
+
+            } else if (result.decision === 'rejected') {
+              console.log('Submission rejected:', result.reason);
+
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: issueNum,
+                body: '❌ **Community Submission Rejected**\n\n' +
+                      result.reason + '\n\n' +
+                      '*Thank you for your interest in contributing to DegreeTrack. If you believe this is in error, please correct the item and submit again.*'
+              });
+
+              await github.rest.issues.addLabels({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: issueNum,
+                labels: ['rejected']
+              }).catch(() => {});
+
+              await github.rest.issues.update({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: issueNum,
+                state: 'closed'
+              });
+            }
